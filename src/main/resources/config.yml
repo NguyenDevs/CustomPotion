@@ -1,0 +1,32 @@
+messages:
+  reload-success: "&aConfig reloaded successfully."
+  given-potion: "&7Given %amount% of %potion_name%&7 to %player%."
+  no-permission: "&cYou do not have permission to use this command."
+  player-not-found: "&cPlayer not found."
+  invalid-amount: "&cInvalid amount specified."
+  potion-not-found: "&cInvalid potion."
+potions:
+  example_speed:
+    # bottle: drink potion
+    # splash: splash potion
+    # lingering: lingering potion
+    type: bottle
+    color: '#00ffea'
+    name: '&9Sonic Potion'
+    potions:
+      - speed:10
+    duration: 60 # in seconds
+  example_super_jump:
+    type: lingering
+    color: '#00FF00'
+    name: '&aHigh Jump'
+    potions:
+      - jump:10
+    duration: 60 # in seconds
+  example_bad_omen:
+    type: splash
+    color: '#FF4500'
+    name: '&6Bad Omen'
+    potions:
+      - bad_omen:10
+    duration: 60 # in seconds

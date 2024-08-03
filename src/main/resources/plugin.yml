@@ -1,0 +1,15 @@
+name: CustomPotion
+version: '${version}'
+main: org.nguyendevs.custompotion.CustomPotion
+api-version: '1.20'
+load: STARTUP
+commands:
+  cpotion:
+    description: Potion management commands
+    aliases: [cp]
+    tab-completer: org.nguyendevs.custompotion.TabComplete
+permissions:
+  cpotion.admin:
+    description: Allows the use of CPotion commands
+    default: op
+
