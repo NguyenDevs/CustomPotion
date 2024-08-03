@@ -5,6 +5,12 @@ messages:
   player-not-found: "&cPlayer not found."
   invalid-amount: "&cInvalid amount specified."
   potion-not-found: "&cInvalid potion."
+  create-success: "&aSuccessfully created potion %potion_name%!"
+  invalid-duration: "&cInvalid duration. Please enter a valid number."
+  invalid-potion-effect: "&cInvalid potion effect. Please enter a valid effect."
+  invalid-effect-level: "&cInvalid effect level. Please enter a valid number."
+  potion-already-exists: "&cPotion with this name already exists!"
+  remove-success: "&aSuccessfully removed potion %potion_name%!"
 potions:
   example_speed:
     # bottle: drink potion

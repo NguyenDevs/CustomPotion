@@ -15,7 +15,6 @@ public class CustomPotion extends JavaPlugin {
         saveDefaultConfig();
         potionManager = new PotionManager(this);
         potionManager.reloadPotions();
-
         CommandHandler commandHandler = new CommandHandler(this, potionManager);
         Objects.requireNonNull(getCommand("cpotion")).setExecutor(commandHandler);
         Objects.requireNonNull(getCommand("cpotion")).setTabCompleter(new TabComplete(this));

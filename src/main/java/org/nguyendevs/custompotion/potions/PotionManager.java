@@ -11,9 +11,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.nguyendevs.custompotion.CustomPotion;
 
-import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 public class PotionManager {
     private final CustomPotion plugin;
@@ -35,6 +33,7 @@ public class PotionManager {
             List<String> effects = config.getStringList("potions." + key + ".potions");
             int duration = config.getInt("potions." + key + ".duration") * 20; // convert to ticks
             String colorHex = config.getString("potions." + key + ".color"); // New field for color
+
             ItemStack potionItem;
             if ("splash".equalsIgnoreCase(type)) {
                 potionItem = new ItemStack(Material.SPLASH_POTION);
@@ -68,6 +67,7 @@ public class PotionManager {
             }
         }
     }
+
     private Color hexToColor(String hex) {
         if (hex.startsWith("#")) {
             hex = hex.substring(1);
@@ -75,9 +75,11 @@ public class PotionManager {
         int intColor = Integer.parseInt(hex, 16);
         return Color.fromRGB((intColor >> 16) & 0xFF, (intColor >> 8) & 0xFF, intColor & 0xFF);
     }
+
     public ItemStack getPotion(String name) {
         return potions.get(name).clone();
     }
+
     public void givePotion(Player player, String potionName, int amount) {
         ItemStack potion = getPotion(potionName);
         potion.setAmount(amount);
